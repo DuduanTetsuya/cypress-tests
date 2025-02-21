@@ -20,9 +20,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Fix Cypress permission  # 🔹 Tambahkan ini
+        run: chmod +x node_modules/.bin/cypress
+
       - name: Install Cypress
-        run: npx cypress install  # 🔹 Pastikan Cypress diinstal sebelum dijalankan
+        run: npx cypress install
 
       - name: Run Cypress tests
         run: npx cypress run --spec "cypress/testcases/saucedemo/FullFlow.cy.js"
+
 
