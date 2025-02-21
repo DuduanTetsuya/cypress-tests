@@ -1,0 +1,22 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Febri Cypress Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "posttest": "node post-to-slack-all.js",
+    "posteach": "node post-to-slack-each.js",
+    "test-and-report": "npm run test && npm run posteach"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^1.7.9",
+    "cypress": "^13.17.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
