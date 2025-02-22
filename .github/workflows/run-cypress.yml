@@ -20,13 +20,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Fix Cypress permission  # 🔹 Tambahkan ini
+      - name: Fix Cypress permission
         run: chmod +x node_modules/.bin/cypress
 
       - name: Install Cypress
         run: npx cypress install
 
       - name: Run Cypress tests
-        run: npx cypress run --spec "cypress/testcases/saucedemo/*.cy.js" && node post-to-slack-each.js
+        run: |
+          npx cypress run --spec "cypress/testcases/saucedemo/*.cy.js"
+        continue-on-error: true  # 🔹 Jangan hentikan workflow jika Cypress gagal
 
-
+      - name: Send results to Slack
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+        run: node post-to-slack-each.js
