@@ -9,23 +9,23 @@
             cypressVersion: '13.17.0',
             testDetails: [
   {
-    "testName": "Sorting Items =  > Login",
+    "testName": "Sorting Items > Login",
     "status": "passed"
   },
   {
-    "testName": "Sorting Items =  > Price (low to high)",
+    "testName": "Sorting Items > Price (Low to High)",
     "status": "passed"
   },
   {
-    "testName": "Sorting Items =  > Price (high to low)",
+    "testName": "Sorting Items > Price (High to Low)",
     "status": "passed"
   },
   {
-    "testName": "Sorting Items =  > Name (A to Z)",
+    "testName": "Sorting Items > Name (A to Z))",
     "status": "passed"
   },
   {
-    "testName": "Sorting Items =  > Name (Z to A)",
+    "testName": "Sorting Items > Price (Low to High)",
     "status": "passed"
   },
   {
@@ -53,15 +53,15 @@
     "status": "passed"
   },
   {
-    "testName": "Select Items =  > 2 items",
+    "testName": "Select Items > 2 items",
     "status": "passed"
   },
   {
-    "testName": "Select Items =  > 3 items",
+    "testName": "Select Items > 3 items",
     "status": "passed"
   },
   {
-    "testName": "Select Items =  > 4 items",
+    "testName": "Select Items > 4 items",
     "status": "passed"
   }
 ]
