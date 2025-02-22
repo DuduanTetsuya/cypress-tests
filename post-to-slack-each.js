@@ -1,48 +1,66 @@
 const axios = require('axios');
 const path = require('path');
+require('dotenv').config(); // Jika menggunakan .env file
 
-// Slack webhook URL
-const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+// Gunakan Bot User OAuth Token dari environment variable
+const SLACK_TOKEN = process.env.SLACK_TOKEN;
+const SLACK_CHANNEL = '#automation-report'; // Ganti dengan channel yang diinginkan
 
-// Path to the custom report file
+// Path ke custom report file
 const reportFile = path.resolve(__dirname, './cypress/reports/custom-report.js');
 
 async function postToSlack() {
   try {
-    // Dynamically import the custom report file
+    // Import custom report secara dinamis
     const report = require(reportFile);
 
-    // Format test details for Slack
+    // Format detail hasil test untuk Slack
     const testDetailsText = report.testDetails
       .map((test, index) => `${index + 1}. *${test.testName}*: ${test.status.toUpperCase()}`)
       .join('\n');
 
-    // Build the Slack message
+    // Build Slack message
     const message = {
-      text: 'Cypress Test Report',
+      channel: SLACK_CHANNEL,
+      text: 'Cypress Test Report from GitHub cronJob Auto-Scheduler',
       attachments: [
         {
           color: report.totalFailed > 0 ? 'danger' : 'good',
           title: 'Summary',
           fields: [
-            { title: 'Total Tests', value: report.totalTests, short: true },
-            { title: 'Passed', value: report.totalPassed, short: true },
-            { title: 'Failed', value: report.totalFailed, short: true },
-            { title: 'Skipped', value: report.totalSkipped, short: true },
+            { title: 'Total Tests', value: report.totalTests.toString(), short: true },
+            { title: 'Passed', value: report.totalPassed.toString(), short: true },
+            { title: 'Failed', value: report.totalFailed.toString(), short: true },
+            { title: 'Skipped', value: report.totalSkipped.toString(), short: true },
           ],
           footer: `Browser: ${report.browser}, OS: ${report.os}, Cypress v${report.cypressVersion}`,
         },
         {
-          color: '#36A64F', // Use a different color for details section
+          color: '#36A64F',
           title: 'Test Details',
           text: testDetailsText,
         },
       ],
     };
 
-    // Send the message to Slack
-    const response = await axios.post(SLACK_WEBHOOK_URL, message);
-    console.log('Report sent to Slack:', response.status, response.statusText);
+    // Kirim pesan ke Slack API menggunakan Bot Token
+    const response = await axios.post(
+      'https://slack.com/api/chat.postMessage',
+      message,
+      {
+        headers: {
+          Authorization: `Bearer ${SLACK_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+
+    // Periksa apakah pengiriman berhasil
+    if (!response.data.ok) {
+      throw new Error(`Slack API Error: ${response.data.error}`);
+    }
+
+    console.log('Report sent to Slack:', response.data);
   } catch (error) {
     console.error('Error sending to Slack:', error.message);
     if (error.response?.data) {
@@ -51,5 +69,5 @@ async function postToSlack() {
   }
 }
 
-// Run the Slack notification
+// Jalankan pengiriman laporan ke Slack
 postToSlack();
