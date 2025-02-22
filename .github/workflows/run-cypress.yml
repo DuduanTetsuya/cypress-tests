@@ -27,6 +27,6 @@ jobs:
         run: npx cypress install
 
       - name: Run Cypress tests
-        run: npx cypress run --spec "cypress/testcases/saucedemo/FullFlow.cy.js"
+        run: npx cypress run --spec "cypress/testcases/saucedemo/*.cy.js" && node report-each.js
 
 
