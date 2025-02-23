@@ -34,4 +34,4 @@ jobs:
       - name: Send results to Slack
         env:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
-        run: node post-to-slack-each.js
+        run: node report-slack-token.js
