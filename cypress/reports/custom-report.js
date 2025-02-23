@@ -1,7 +1,7 @@
 
           const report = {
-            totalTests: 14,
-            totalPassed: 14,
+            totalTests: 6,
+            totalPassed: 6,
             totalFailed: 0,
             totalSkipped: 0,
             browser: 'electron',
@@ -9,59 +9,27 @@
             cypressVersion: '13.17.0',
             testDetails: [
   {
-    "testName": "Sorting Items > Login",
+    "testName": "Admin Page Full Test > Login",
     "status": "passed"
   },
   {
-    "testName": "Sorting Items > Price (Low to High)",
+    "testName": "Admin Page Full Test > Verify Top Bar Menu",
     "status": "passed"
   },
   {
-    "testName": "Sorting Items > Price (High to Low)",
+    "testName": "Admin Page Full Test > User Management - Add New Username",
     "status": "passed"
   },
   {
-    "testName": "Sorting Items > Name (A to Z))",
+    "testName": "Admin Page Full Test > User Management - Edit Username",
     "status": "passed"
   },
   {
-    "testName": "Sorting Items > Price (Low to High)",
+    "testName": "Admin Page Full Test > User Management - Delete Username",
     "status": "passed"
   },
   {
-    "testName": "SauceDemo Full Flow > Login",
-    "status": "passed"
-  },
-  {
-    "testName": "SauceDemo Full Flow > Select Random Items",
-    "status": "passed"
-  },
-  {
-    "testName": "SauceDemo Full Flow > Remove an item",
-    "status": "passed"
-  },
-  {
-    "testName": "SauceDemo Full Flow > Checkout and fill the form",
-    "status": "passed"
-  },
-  {
-    "testName": "SauceDemo Full Flow > Complete the checkout",
-    "status": "passed"
-  },
-  {
-    "testName": "Login Test",
-    "status": "passed"
-  },
-  {
-    "testName": "Select Items > 2 items",
-    "status": "passed"
-  },
-  {
-    "testName": "Select Items > 3 items",
-    "status": "passed"
-  },
-  {
-    "testName": "Select Items > 4 items",
+    "testName": "Admin Page Full Test > User Management - Delete Multiple Usernames",
     "status": "passed"
   }
 ]

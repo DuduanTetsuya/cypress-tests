@@ -6,7 +6,16 @@ module.exports = {
     // Specify the pattern for test files
     specPattern: 'cypress/testcases/**/*.cy.{js,jsx,ts,tsx}',
     chromeWebSecurity: false, // Allows cross-origin requests
-    testIsolation: false, //Prevent redirect to blank page
+    testIsolation: false, // Prevent redirect to blank page
+
+    // Konfigurasi reporter Mochawesome
+    reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: 'cypress/reports/mochawesome-report',
+      overwrite: false,
+      html: true,
+      json: true
+    },
 
     setupNodeEvents(on, config) {
       
@@ -52,7 +61,6 @@ module.exports = {
       });
 
       return config;
-    },
-    chromeWebSecurity: false, // Disable Chrome's cross-origin restrictions
-  },
+    }
+  }
 };

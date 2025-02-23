@@ -1,7 +1,7 @@
 import LoginPage from './pages/LoginPage';
 import AdminPage from './pages/AdminPage';
 
-describe('Admin Page Full Test', () => {
+describe('Admin Page', () => {
 const username = 'DudTetsuya';
 const password = 'Password123';
 const role = 'Admin';
@@ -19,8 +19,8 @@ const status = 'Enabled';
 
     it('User Management - Add New Username', () => {
         AdminPage.addUser(username, password, role, status);
-        // AdminPage.addUser('Pekok123', password, role, status);
-        // AdminPage.addUser('Pekok12345', password, role, status);
+        AdminPage.addUser('Pekok123', password, role, status);
+        AdminPage.addUser('Pekok12345', password, role, status);
         AdminPage.searchUser(username);
     });
 

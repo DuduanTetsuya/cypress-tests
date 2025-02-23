@@ -3,7 +3,7 @@ import ProductsPage from './pages/ProductsPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 
-describe('SauceDemo Full Flow', () => {
+describe('SauceDemo', () => {
     it('Login', () => {
         LoginPage.visit();
         LoginPage.login('standard_user', 'secret_sauce');

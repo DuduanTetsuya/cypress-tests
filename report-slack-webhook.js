@@ -4,7 +4,7 @@ const axios = require('axios');
 const path = require('path');
 
 // Slack webhook URL
-const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
 // Path to the custom report file
 const reportFile = path.resolve(__dirname, './cypress/reports/custom-report.js');
@@ -21,7 +21,7 @@ async function postToSlack() {
 
     // Build the Slack message
     const message = {
-      text: 'Cypress Test Report',
+      text: 'Cypress Test Report Local',
       attachments: [
         {
           color: report.totalFailed > 0 ? 'danger' : 'good',
