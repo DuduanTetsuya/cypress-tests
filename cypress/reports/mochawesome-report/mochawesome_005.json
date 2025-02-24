@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-24T06:47:35.074Z",
+    "end": "2025-02-24T06:48:33.439Z",
+    "duration": 58365,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5722af5c-56ba-40ac-81af-92b1c30e305c",
+      "title": "",
+      "fullFile": "cypress\\testcases\\orangehrm\\admin\\Job.cy.js",
+      "file": "cypress\\testcases\\orangehrm\\admin\\Job.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "78905b19-b655-4cc9-8c2b-8bdeaee6aa85",
+          "title": "Admin - Job - Job Titles",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Admin - Job - Job Titles Login",
+              "timedOut": null,
+              "duration": 7056,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.visit();\n_LoginPage.default.login('Admin', 'admin123');",
+              "err": {},
+              "uuid": "69a02ce3-4be2-4750-a8fc-34627c4c2bcb",
+              "parentUUID": "78905b19-b655-4cc9-8c2b-8bdeaee6aa85",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Access Job Titles page",
+              "fullTitle": "Admin - Job - Job Titles Access Job Titles page",
+              "timedOut": null,
+              "duration": 4215,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AdminUserManagement.default.goToAdmin();\njobTitle.goToJobTitle();",
+              "err": {},
+              "uuid": "13ca6001-7072-41cc-bc7e-0c6dc137b7b5",
+              "parentUUID": "78905b19-b655-4cc9-8c2b-8bdeaee6aa85",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add a new Job Title",
+              "fullTitle": "Admin - Job - Job Titles Add a new Job Title",
+              "timedOut": null,
+              "duration": 27678,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "jobTitle.addJobTitle('Cypress Automation', 'Automate all test', 'Love Automation', true);\njobTitle.addJobTitle('Cypress Automation 1', 'Automate all test', 'Love Automation', false);\njobTitle.addJobTitle('Cypress Automation 2', false);",
+              "err": {},
+              "uuid": "e866397e-d4e7-4850-8e57-c0b65988c9c1",
+              "parentUUID": "78905b19-b655-4cc9-8c2b-8bdeaee6aa85",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit an existing Job Title",
+              "fullTitle": "Admin - Job - Job Titles Edit an existing Job Title",
+              "timedOut": null,
+              "duration": 7889,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "jobTitle.editJobTitle('Cypress Automation', 'Senior Cypress Automation');",
+              "err": {},
+              "uuid": "7bb96e98-bfec-4365-87f8-c76a1fd54ef0",
+              "parentUUID": "78905b19-b655-4cc9-8c2b-8bdeaee6aa85",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete a Job Title",
+              "fullTitle": "Admin - Job - Job Titles Delete a Job Title",
+              "timedOut": null,
+              "duration": 8017,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "jobTitle.deleteJobTitle('Senior Cypress Automation');\njobTitle.deleteJobTitle('Cypress Automation 1');\njobTitle.deleteJobTitle('Cypress Automation 2');",
+              "err": {},
+              "uuid": "1849899f-de66-4967-894e-72b23aab1dd9",
+              "parentUUID": "78905b19-b655-4cc9-8c2b-8bdeaee6aa85",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "69a02ce3-4be2-4750-a8fc-34627c4c2bcb",
+            "13ca6001-7072-41cc-bc7e-0c6dc137b7b5",
+            "e866397e-d4e7-4850-8e57-c0b65988c9c1",
+            "7bb96e98-bfec-4365-87f8-c76a1fd54ef0",
+            "1849899f-de66-4967-894e-72b23aab1dd9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 54855,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

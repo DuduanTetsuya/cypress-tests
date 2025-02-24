@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   e2e: {
     // Specify the pattern for test files
-    specPattern: 'cypress/testcases/**/*.cy.{js,jsx,ts,tsx}',
+    specPattern: 'cypress/ProjectTraining/**/*.cy.{js,jsx,ts,tsx}',
     chromeWebSecurity: false, // Allows cross-origin requests
     testIsolation: false, // Prevent redirect to blank page
 

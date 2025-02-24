@@ -1,0 +1,194 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 2,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-02-24T04:31:57.487Z",
+    "end": "2025-02-24T04:32:31.237Z",
+    "duration": 33750,
+    "testsRegistered": 5,
+    "passPercent": 40,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "808886ce-743f-4ff1-8ce3-ac0060f984e9",
+      "title": "",
+      "fullFile": "cypress\\testcases\\orangehrm\\admin\\Job.cy.js",
+      "file": "cypress\\testcases\\orangehrm\\admin\\Job.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0d3b0022-19b1-4df5-8a5a-36ff03f2ada5",
+          "title": "Admin - Job Titles",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Admin - Job Titles Login",
+              "timedOut": null,
+              "duration": 7723,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.visit();\n_LoginPage.default.login('Admin', 'admin123');",
+              "err": {},
+              "uuid": "f7cec55d-87dd-4f64-8a9e-72f8bf098c83",
+              "parentUUID": "0d3b0022-19b1-4df5-8a5a-36ff03f2ada5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should access the Job Titles page",
+              "fullTitle": "Admin - Job Titles Should access the Job Titles page",
+              "timedOut": null,
+              "duration": 5802,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AdminUserManagement.default.goToAdmin();\njobTitle.goToJobTitle();",
+              "err": {},
+              "uuid": "41fde224-54b7-40ae-ac44-2b6546a7ea9a",
+              "parentUUID": "0d3b0022-19b1-4df5-8a5a-36ff03f2ada5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should add a new Job Title",
+              "fullTitle": "Admin - Job Titles Should add a new Job Title",
+              "timedOut": null,
+              "duration": 8405,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "jobTitle.addJobTitle('Cypress Automation', 'Automate all test', 'Love Automation');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<input.oxd-file-input>' to have value 'C:\\\\fakepath\\\\SKUL band.pdf.pdf', but the value was 'C:\\\\fakepath\\\\SKUL band.pdf'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<input.oxd-file-input>' to have value 'C:\\\\fakepath\\\\SKUL band.pdf.pdf', but the value was 'C:\\\\fakepath\\\\SKUL band.pdf'\n    at JobTitle.addJobTitle (webpack://cypress/./cypress/testcases/orangehrm/pages/AdminJob.js:15:13)\n    at Context.eval (webpack://cypress/./cypress/testcases/orangehrm/admin/Job.cy.js:19:17)",
+                "diff": "- 'C:\\\\fakepath\\\\SKUL band.pdf'\n+ 'C:\\\\fakepath\\\\SKUL band.pdf.pdf'\n"
+              },
+              "uuid": "2e8158e5-4e18-43bc-af60-dede090b84bc",
+              "parentUUID": "0d3b0022-19b1-4df5-8a5a-36ff03f2ada5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should edit an existing Job Title",
+              "fullTitle": "Admin - Job Titles Should edit an existing Job Title",
+              "timedOut": null,
+              "duration": 4132,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "jobTitle.editJobTitle('Cypress Automation', 'Senior Cypress Automation');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Cypress Automation' within the selector: '.oxd-table-cell' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Cypress Automation' within the selector: '.oxd-table-cell' but never did.\n    at JobTitle.editJobTitle (webpack://cypress/./cypress/testcases/orangehrm/pages/AdminJob.js:21:11)\n    at Context.eval (webpack://cypress/./cypress/testcases/orangehrm/admin/Job.cy.js:23:17)",
+                "diff": null
+              },
+              "uuid": "c31c62e9-d332-43d7-bee7-536d067ef926",
+              "parentUUID": "0d3b0022-19b1-4df5-8a5a-36ff03f2ada5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should delete a Job Title",
+              "fullTitle": "Admin - Job Titles Should delete a Job Title",
+              "timedOut": null,
+              "duration": 4179,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "jobTitle.deleteJobTitle('Senior Cypress Automation');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Senior Cypress Automation' within the selector: '.oxd-table-cell' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Senior Cypress Automation' within the selector: '.oxd-table-cell' but never did.\n    at JobTitle.deleteJobTitle (webpack://cypress/./cypress/testcases/orangehrm/pages/AdminJob.js:32:11)\n    at Context.eval (webpack://cypress/./cypress/testcases/orangehrm/admin/Job.cy.js:27:17)",
+                "diff": null
+              },
+              "uuid": "6e83523e-bd05-41da-a859-f1969c3d5488",
+              "parentUUID": "0d3b0022-19b1-4df5-8a5a-36ff03f2ada5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f7cec55d-87dd-4f64-8a9e-72f8bf098c83",
+            "41fde224-54b7-40ae-ac44-2b6546a7ea9a"
+          ],
+          "failures": [
+            "2e8158e5-4e18-43bc-af60-dede090b84bc",
+            "c31c62e9-d332-43d7-bee7-536d067ef926",
+            "6e83523e-bd05-41da-a859-f1969c3d5488"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 30241,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

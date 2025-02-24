@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Cypress tests
         run: |
-          npx cypress run --spec "cypress/testcases/saucedemo/*.cy.js"
+          npx cypress run --spec "cypress/ProjectTraining/saucedemo/*.cy.js"
         continue-on-error: true  # 🔹 Jangan hentikan workflow jika Cypress gagal
 
       - name: Send results to Slack

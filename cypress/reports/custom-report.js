@@ -1,7 +1,7 @@
 
           const report = {
-            totalTests: 6,
-            totalPassed: 6,
+            totalTests: 5,
+            totalPassed: 5,
             totalFailed: 0,
             totalSkipped: 0,
             browser: 'electron',
@@ -9,27 +9,23 @@
             cypressVersion: '13.17.0',
             testDetails: [
   {
-    "testName": "Admin Page Full Test > Login",
+    "testName": "Admin - Job - Job Titles > Login",
     "status": "passed"
   },
   {
-    "testName": "Admin Page Full Test > Verify Top Bar Menu",
+    "testName": "Admin - Job - Job Titles > Access Job Titles page",
     "status": "passed"
   },
   {
-    "testName": "Admin Page Full Test > User Management - Add New Username",
+    "testName": "Admin - Job - Job Titles > Add a new Job Title",
     "status": "passed"
   },
   {
-    "testName": "Admin Page Full Test > User Management - Edit Username",
+    "testName": "Admin - Job - Job Titles > Edit an existing Job Title",
     "status": "passed"
   },
   {
-    "testName": "Admin Page Full Test > User Management - Delete Username",
-    "status": "passed"
-  },
-  {
-    "testName": "Admin Page Full Test > User Management - Delete Multiple Usernames",
+    "testName": "Admin - Job - Job Titles > Delete a Job Title",
     "status": "passed"
   }
 ]

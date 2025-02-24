@@ -1,4 +1,4 @@
-class AdminPage {
+class AdminUserManagement {
     goToAdmin() {
         cy.get('.oxd-main-menu-item--name').contains('Admin').click();
         cy.url().should('include', '/admin/viewSystemUsers');
@@ -132,4 +132,4 @@ class AdminPage {
     }    
 }
 
-export default new AdminPage();
+export default new AdminUserManagement();
