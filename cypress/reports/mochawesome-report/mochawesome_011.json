@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-24T07:07:50.218Z",
+    "end": "2025-02-24T07:07:55.095Z",
+    "duration": 4877,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bc13cf2c-4877-4d9a-988c-da5613aa6320",
+      "title": "",
+      "fullFile": "cypress\\ProjectTraining\\saucedemo\\FullFlow.cy.js",
+      "file": "cypress\\ProjectTraining\\saucedemo\\FullFlow.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "50b73c07-48b2-4604-ae29-d1029ffbe368",
+          "title": "SauceDemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "SauceDemo Login",
+              "timedOut": null,
+              "duration": 1982,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.visit();\n_LoginPage.default.login('standard_user', 'secret_sauce');",
+              "err": {},
+              "uuid": "0c9051e8-7b81-4a25-ba48-3b12364e13ab",
+              "parentUUID": "50b73c07-48b2-4604-ae29-d1029ffbe368",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select Random Items",
+              "fullTitle": "SauceDemo Select Random Items",
+              "timedOut": null,
+              "duration": 358,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const numItems = Cypress._.random(2, 4);\ncy.log(`Randomly selected ${numItems} items`);\n_ProductsPage.default.selectItems(numItems);",
+              "err": {},
+              "uuid": "aeeb517f-56cd-4939-98a5-57b195c1f45e",
+              "parentUUID": "50b73c07-48b2-4604-ae29-d1029ffbe368",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Remove an item",
+              "fullTitle": "SauceDemo Remove an item",
+              "timedOut": null,
+              "duration": 193,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.goToCart();\n_CartPage.default.removeItem();",
+              "err": {},
+              "uuid": "53bd74a0-0a2f-4590-9e27-4a44e1ea332f",
+              "parentUUID": "50b73c07-48b2-4604-ae29-d1029ffbe368",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checkout and fill the form",
+              "fullTitle": "SauceDemo Checkout and fill the form",
+              "timedOut": null,
+              "duration": 774,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_CartPage.default.proceedToCheckout();\n_CheckoutPage.default.fillCheckoutForm('John', 'Doe', '12345');",
+              "err": {},
+              "uuid": "b2e787eb-9cf3-46d8-bdc4-d4c4c4b7ee76",
+              "parentUUID": "50b73c07-48b2-4604-ae29-d1029ffbe368",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Complete the checkout",
+              "fullTitle": "SauceDemo Complete the checkout",
+              "timedOut": null,
+              "duration": 96,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_CheckoutPage.default.completeCheckout();\ncy.url().should('include', 'checkout-complete');",
+              "err": {},
+              "uuid": "62aa038c-4730-49e2-b2fc-03d27d72e03d",
+              "parentUUID": "50b73c07-48b2-4604-ae29-d1029ffbe368",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c9051e8-7b81-4a25-ba48-3b12364e13ab",
+            "aeeb517f-56cd-4939-98a5-57b195c1f45e",
+            "53bd74a0-0a2f-4590-9e27-4a44e1ea332f",
+            "b2e787eb-9cf3-46d8-bdc4-d4c4c4b7ee76",
+            "62aa038c-4730-49e2-b2fc-03d27d72e03d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3403,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,17 +1,15 @@
-import LoginPage from '../pages/LoginPage';
-import { JobTitle } from '../pages/AdminJob';
-import AdminUserManagement from '../pages/AdminUserManagement';
+import { JobTitles } from '../pages/AdminJob';
+import Utility from '../pages/Utility';
 
-describe('Admin - Job - Job Titles', () => {
-    const jobTitle = new JobTitle();
+describe('Job - Job Titles', () => {
+    const jobTitle = new JobTitles();
 
     it('Login', () => {
-            LoginPage.visit();
-            LoginPage.login('Admin', 'admin123');
-        });
+        Utility.login('Admin', 'admin123');
+    });   
 
     it('Access Job Titles page', () => {
-        AdminUserManagement.goToAdmin();
+        Utility.goToAdmin();
         jobTitle.goToJobTitle();
     });
 
@@ -26,10 +24,10 @@ describe('Admin - Job - Job Titles', () => {
     });
 
     it('Delete a Job Title', () => {
-        jobTitle.deleteJobTitle('Senior Cypress Automation');
+        Utility.deleteItem('Senior Cypress Automation');
     });
 
     it('Delete Multiple Usernames', () => {
-        jobTitle.deleteMultipleJobTitles(['Cypress Automation 1', 'Cypress Automation 2']);
+        Utility.deleteMultipleItems(['Cypress Automation 1', 'Cypress Automation 2']);
     });
 });

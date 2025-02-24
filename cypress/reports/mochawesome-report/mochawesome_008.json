@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-24T07:07:18.769Z",
+    "end": "2025-02-24T07:07:30.399Z",
+    "duration": 11630,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9011cde9-ed4b-4b41-be69-995508e541e2",
+      "title": "",
+      "fullFile": "cypress\\ProjectTraining\\login-success.cy.js",
+      "file": "cypress\\ProjectTraining\\login-success.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Visit website",
+          "fullTitle": "Visit website",
+          "timedOut": null,
+          "duration": 5149,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.clearCookies();\ncy.visit('https://practice.expandtesting.com/login');",
+          "err": {},
+          "uuid": "8e698348-982b-4bde-ac34-07ea34eacfb8",
+          "parentUUID": "9011cde9-ed4b-4b41-be69-995508e541e2",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Login",
+          "fullTitle": "Login",
+          "timedOut": null,
+          "duration": 3712,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.get('#login > :nth-child(1) > :nth-child(1)').type('practice');\ncy.get('#password').type('SuperSecretPassword!');\ncy.get('#login > .btn').click();\ncy.contains('You logged into a secure area!').should('exist');\n//cy.get('.specific-element').should('contain.text', 'blablabla'); //specific elements",
+          "err": {},
+          "uuid": "c38b54dc-d482-4492-8a7c-207646f49c44",
+          "parentUUID": "9011cde9-ed4b-4b41-be69-995508e541e2",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "8e698348-982b-4bde-ac34-07ea34eacfb8",
+        "c38b54dc-d482-4492-8a7c-207646f49c44"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 8861,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

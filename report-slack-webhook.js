@@ -4,7 +4,7 @@ const axios = require('axios');
 const path = require('path');
 
 // Slack webhook URL
-const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
 // Path to the custom report file
 const reportFile = path.resolve(__dirname, './cypress/reports/custom-report.js');

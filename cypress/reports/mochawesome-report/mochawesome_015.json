@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-24T07:09:09.223Z",
+    "end": "2025-02-24T07:10:09.609Z",
+    "duration": 60386,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ca55042b-1d87-43b9-a4b7-e89479b27ba4",
+      "title": "",
+      "fullFile": "cypress\\ProjectTraining\\orangehrm\\admin\\UserManagement.cy.js",
+      "file": "cypress\\ProjectTraining\\orangehrm\\admin\\UserManagement.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c0805d75-b898-4ff2-89f6-4d951927b139",
+          "title": "Admin - User Management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Admin - User Management Login",
+              "timedOut": null,
+              "duration": 6237,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.visit();\n_LoginPage.default.login('Admin', 'admin123');",
+              "err": {},
+              "uuid": "2087712a-e5be-4dbd-89a8-eba2274516a7",
+              "parentUUID": "c0805d75-b898-4ff2-89f6-4d951927b139",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Top Bar Menu",
+              "fullTitle": "Admin - User Management Verify Top Bar Menu",
+              "timedOut": null,
+              "duration": 4221,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AdminUserManagement.default.goToAdmin();\n_AdminUserManagement.default.verifyTopbarMenu();",
+              "err": {},
+              "uuid": "953ef9a3-1e7e-42c0-bf4e-dabcb29d0d04",
+              "parentUUID": "c0805d75-b898-4ff2-89f6-4d951927b139",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add New Username",
+              "fullTitle": "Admin - User Management Add New Username",
+              "timedOut": null,
+              "duration": 34604,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AdminUserManagement.default.addUser(username, password, role, status);\n_AdminUserManagement.default.addUser('Pekok123', password, role, status);\n_AdminUserManagement.default.addUser('Pekok12345', password, role, status);\n_AdminUserManagement.default.searchUser(username);",
+              "err": {},
+              "uuid": "f13ba24c-5e5b-457e-9884-e2231b7adf9f",
+              "parentUUID": "c0805d75-b898-4ff2-89f6-4d951927b139",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit Username",
+              "fullTitle": "Admin - User Management Edit Username",
+              "timedOut": null,
+              "duration": 9008,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AdminUserManagement.default.editUsername(username, 'DudTetsuyaBaru');\n_AdminUserManagement.default.searchUser('DudTetsuyaBaru');",
+              "err": {},
+              "uuid": "cdced457-8fe0-444d-b72f-1b7c77583d67",
+              "parentUUID": "c0805d75-b898-4ff2-89f6-4d951927b139",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete Username",
+              "fullTitle": "Admin - User Management Delete Username",
+              "timedOut": null,
+              "duration": 201,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AdminUserManagement.default.deleteUsername('DudTetsuyaBaru');",
+              "err": {},
+              "uuid": "8712c2a6-64b0-4b5e-a8e4-f7d65a94e407",
+              "parentUUID": "c0805d75-b898-4ff2-89f6-4d951927b139",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete Multiple Usernames",
+              "fullTitle": "Admin - User Management Delete Multiple Usernames",
+              "timedOut": null,
+              "duration": 3612,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AdminUserManagement.default.deleteMultipleUsers(['Pekok123', 'Pekok12345']);",
+              "err": {},
+              "uuid": "923a7633-8229-4815-b0ff-78c7bd5ae8b4",
+              "parentUUID": "c0805d75-b898-4ff2-89f6-4d951927b139",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2087712a-e5be-4dbd-89a8-eba2274516a7",
+            "953ef9a3-1e7e-42c0-bf4e-dabcb29d0d04",
+            "f13ba24c-5e5b-457e-9884-e2231b7adf9f",
+            "cdced457-8fe0-444d-b72f-1b7c77583d67",
+            "8712c2a6-64b0-4b5e-a8e4-f7d65a94e407",
+            "923a7633-8229-4815-b0ff-78c7bd5ae8b4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 57883,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-24T07:07:09.497Z",
+    "end": "2025-02-24T07:07:12.405Z",
+    "duration": 2908,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2ed2c2a0-d6fc-4923-807f-2ee20b70a7e8",
+      "title": "",
+      "fullFile": "cypress\\ProjectTraining\\api_test.cy.js",
+      "file": "cypress\\ProjectTraining\\api_test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2269d598-f960-4e1c-b7dc-15cb0228bf19",
+          "title": "API Testing with Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should fetch all users",
+              "fullTitle": "API Testing with Cypress Should fetch all users",
+              "timedOut": null,
+              "duration": 801,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', 'https://jsonplaceholder.typicode.com/users').should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.length(10);\n});",
+              "err": {},
+              "uuid": "3025edf4-b783-4300-afc2-32b3874bc288",
+              "parentUUID": "2269d598-f960-4e1c-b7dc-15cb0228bf19",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should create a new user",
+              "fullTitle": "API Testing with Cypress Should create a new user",
+              "timedOut": null,
+              "duration": 825,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('POST', 'https://jsonplaceholder.typicode.com/users', {\n  name: 'John Doe',\n  username: 'johndoe',\n  email: 'john@example.com'\n}).should(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body).to.have.property('id');\n});",
+              "err": {},
+              "uuid": "eed5d70b-ae3e-472c-bb35-0abfd2870958",
+              "parentUUID": "2269d598-f960-4e1c-b7dc-15cb0228bf19",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should update a user",
+              "fullTitle": "API Testing with Cypress Should update a user",
+              "timedOut": null,
+              "duration": 821,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('PUT', 'https://jsonplaceholder.typicode.com/users/1', {\n  name: 'Jane Doe'\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.name).to.eq('Jane Doe');\n});",
+              "err": {},
+              "uuid": "0caad860-af20-42b4-b24b-181bed91fe10",
+              "parentUUID": "2269d598-f960-4e1c-b7dc-15cb0228bf19",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should delete a user",
+              "fullTitle": "API Testing with Cypress Should delete a user",
+              "timedOut": null,
+              "duration": 420,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('DELETE', 'https://jsonplaceholder.typicode.com/users/1').should(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "05c5420b-9412-4b08-b356-18465ddefacf",
+              "parentUUID": "2269d598-f960-4e1c-b7dc-15cb0228bf19",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3025edf4-b783-4300-afc2-32b3874bc288",
+            "eed5d70b-ae3e-472c-bb35-0abfd2870958",
+            "0caad860-af20-42b4-b24b-181bed91fe10",
+            "05c5420b-9412-4b08-b356-18465ddefacf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2867,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-24T07:08:01.040Z",
+    "end": "2025-02-24T07:08:06.031Z",
+    "duration": 4991,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e3638e9f-8e52-4a55-930b-5f27138783df",
+      "title": "",
+      "fullFile": "cypress\\ProjectTraining\\saucedemo\\SelectItems.cy.js",
+      "file": "cypress\\ProjectTraining\\saucedemo\\SelectItems.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "699f21f6-2c51-4587-9d42-59ee69ed9986",
+          "title": "Select Items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "2 items",
+              "fullTitle": "Select Items 2 items",
+              "timedOut": null,
+              "duration": 1980,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.visit();\n_LoginPage.default.login('standard_user', 'secret_sauce');\n_ProductsPage.default.selectItems(2);\n_ProductsPage.default.checkCartItemCount(2);",
+              "err": {},
+              "uuid": "37714f1b-9b44-4981-914f-4f8d264cc858",
+              "parentUUID": "699f21f6-2c51-4587-9d42-59ee69ed9986",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3 items",
+              "fullTitle": "Select Items 3 items",
+              "timedOut": null,
+              "duration": 705,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.selectItems(3);\n_ProductsPage.default.checkCartItemCount(3);",
+              "err": {},
+              "uuid": "46f58d8b-4f2e-4ce1-8c97-0ba96c1712ee",
+              "parentUUID": "699f21f6-2c51-4587-9d42-59ee69ed9986",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4 items",
+              "fullTitle": "Select Items 4 items",
+              "timedOut": null,
+              "duration": 896,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.selectItems(4);\n_ProductsPage.default.checkCartItemCount(4);",
+              "err": {},
+              "uuid": "cda890b5-1070-4402-9795-49019c005727",
+              "parentUUID": "699f21f6-2c51-4587-9d42-59ee69ed9986",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "37714f1b-9b44-4981-914f-4f8d264cc858",
+            "46f58d8b-4f2e-4ce1-8c97-0ba96c1712ee",
+            "cda890b5-1070-4402-9795-49019c005727"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3581,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

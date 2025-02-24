@@ -1,6 +1,9 @@
-import LoginPage from './pages/LoginPage';
+import Utility from './pages/Utility';
 
-it('Login Test', () => {
-    LoginPage.visit();
-    LoginPage.login('Admin', 'admin123');
+it('Login', () => {
+    Utility.login('Admin', 'admin123');
+});
+
+it('Logout', () => {
+    Utility.logout();
 });

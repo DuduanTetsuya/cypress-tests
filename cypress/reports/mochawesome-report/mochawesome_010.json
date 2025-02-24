@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-24T07:07:43.476Z",
+    "end": "2025-02-24T07:07:48.789Z",
+    "duration": 5313,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9abc2b0e-5a8a-4fb9-b48c-85ba8a736812",
+      "title": "",
+      "fullFile": "cypress\\ProjectTraining\\saucedemo\\FilterProduct.cy.js",
+      "file": "cypress\\ProjectTraining\\saucedemo\\FilterProduct.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e2bb0bb-5085-47b1-9d97-e1a96d3eb656",
+          "title": "Sorting Items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Sorting Items Login",
+              "timedOut": null,
+              "duration": 2343,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.visit();\n_LoginPage.default.login('standard_user', 'secret_sauce');",
+              "err": {},
+              "uuid": "9013025d-1f80-40bf-b683-49e16b755cc5",
+              "parentUUID": "2e2bb0bb-5085-47b1-9d97-e1a96d3eb656",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Price (Low to High)",
+              "fullTitle": "Sorting Items Price (Low to High)",
+              "timedOut": null,
+              "duration": 164,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.sortingPriceLowToHigh();",
+              "err": {},
+              "uuid": "fb3037d7-ee8b-49bd-a124-ded6e1090b0e",
+              "parentUUID": "2e2bb0bb-5085-47b1-9d97-e1a96d3eb656",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Price (High to Low)",
+              "fullTitle": "Sorting Items Price (High to Low)",
+              "timedOut": null,
+              "duration": 162,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.sortingPriceHighToLow();",
+              "err": {},
+              "uuid": "4651ed8c-e596-4223-be7a-a2e08b97e746",
+              "parentUUID": "2e2bb0bb-5085-47b1-9d97-e1a96d3eb656",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Name (A to Z))",
+              "fullTitle": "Sorting Items Name (A to Z))",
+              "timedOut": null,
+              "duration": 153,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.sortingNameAtoZ();",
+              "err": {},
+              "uuid": "a3dc25ba-0dd4-4442-8176-60801c51f623",
+              "parentUUID": "2e2bb0bb-5085-47b1-9d97-e1a96d3eb656",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Price (Low to High)",
+              "fullTitle": "Sorting Items Price (Low to High)",
+              "timedOut": null,
+              "duration": 166,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.sortingNameZtoA();",
+              "err": {},
+              "uuid": "d3e9add4-87c8-4a02-9cd7-eb7636b63895",
+              "parentUUID": "2e2bb0bb-5085-47b1-9d97-e1a96d3eb656",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9013025d-1f80-40bf-b683-49e16b755cc5",
+            "fb3037d7-ee8b-49bd-a124-ded6e1090b0e",
+            "4651ed8c-e596-4223-be7a-a2e08b97e746",
+            "a3dc25ba-0dd4-4442-8176-60801c51f623",
+            "d3e9add4-87c8-4a02-9cd7-eb7636b63895"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2988,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
