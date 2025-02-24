@@ -8,8 +8,8 @@ describe('OrangeHRM Full Test', () => {
     require('./admin/UserManagement.cy.js');
     require('./admin/JobJobTitles.cy.js');
     require('./admin/JobPayGrades.cy.js');
-
-    it('Logout', () => {
+    
+    after(() => {
         Utility.logout();
         Cypress.env('isLoggedIn', false); // Reset state login
     });
