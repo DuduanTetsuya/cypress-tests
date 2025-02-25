@@ -1,17 +1,13 @@
 
           const report = {
-            totalTests: 18,
-            totalPassed: 18,
+            totalTests: 17,
+            totalPassed: 17,
             totalFailed: 0,
             totalSkipped: 0,
             browser: 'electron',
             os: 'win32 10.0.19045',
             cypressVersion: '13.17.0',
             testDetails: [
-  {
-    "testName": "OrangeHRM Full Test > Logout",
-    "status": "passed"
-  },
   {
     "testName": "OrangeHRM Full Test > Admin - User Management > Login",
     "status": "passed"

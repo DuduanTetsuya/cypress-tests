@@ -1,4 +1,5 @@
-export class JobTitles {
+class AdminJob {
+    //#region ########## Job Titles ##########
     goToJobTitle() {
         cy.get('.oxd-topbar-body-nav-tab-item').contains('Job').click();
         cy.get('.oxd-topbar-body-nav-tab-link').contains('Job Titles').click();
@@ -31,9 +32,9 @@ export class JobTitles {
         cy.get('.oxd-button--secondary').click();
         cy.contains('.oxd-table-cell', newTitle, { timeout: 5000 }).should('exist');
     }
-}
+    // #endregion ====================
 
-export class PayGrades {
+    //#region ########## Pay Grades ##########
     goToPayGrades() {
         cy.get('.oxd-topbar-body-nav-tab-item').contains('Job').click();
         cy.get('.oxd-topbar-body-nav-tab-link').contains('Pay Grades').click();
@@ -70,4 +71,7 @@ export class PayGrades {
         cy.contains('.oxd-button--ghost', 'Cancel', { timeout: 10000 }).click();
         cy.contains('.oxd-table-cell', newName, { timeout: 10000 }).should('exist');
     }
+    // #endregion ====================
 }
+
+export default new AdminJob();
