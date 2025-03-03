@@ -1,12 +1,15 @@
 class ProductsPage {
      selectItems(numItems) {
-        cy.get('.inventory_item').then(items => {
-            const randomItems = Cypress._.sampleSize(items.toArray(), numItems);
-            randomItems.forEach(item => {
-                // Mengambil tombol add-to-cart yang sesuai
-                cy.wrap(item)
-                  .find('button')
-                  .click();
+        cy.get('.inventory_item').then($items => {
+            // Ubah ke array biasa
+            const itemsArray = [...$items];
+        
+            // Ambil item secara acak
+            const randomItems = Cypress._.sampleSize(itemsArray, numItems);
+        
+            // Klik tombol "Add to Cart" untuk item yang dipilih
+            randomItems.forEach($item => {
+                cy.wrap($item).find('button').click();
             });
         });
     }
